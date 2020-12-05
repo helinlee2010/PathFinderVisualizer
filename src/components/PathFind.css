@@ -1,0 +1,9 @@
+.big-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.row-wrapper{
+    display:flex;
+}
