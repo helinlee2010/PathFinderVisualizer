@@ -7,3 +7,18 @@
 .row-wrapper{
     display:flex;
 }
+.button-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-bottom: 2rem;
+}
+button{
+    color: rgb(241, 227, 241);
+    font-size: 16px;
+    background-color: rgb(131, 114, 228);
+    padding: 0.4em 0.6em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

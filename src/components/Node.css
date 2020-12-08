@@ -14,17 +14,27 @@
     background-color: rgb(122, 121, 122);
 }
 
-/* @keyframes footprint{  
+@keyframes footprint{  
     from{background-color: blanchedalmond;}
-    to {background-color: rgb(141, 152, 203);;}
-} */
-
+    to {background-color: rgb(141, 152, 203);}
+}
 .visited{
-    /* animation-name: footprint;
-    animation-duration: 1s; */
+    animation-name: footprint;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-fill-mode: forwards;
+    /* animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-play-state: running; */
     background-color: rgb(136, 164, 212);
 }
-
-.shortest-path{
-    background-color: turquoise;
+@keyframes pathAnimation{  
+    from{background-color: rgb(141, 152, 203);}
+    to {background-color: rgb(194, 231, 135);}
 }
+.shortest-path{
+    animation: pathAnimation 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s 1 alternate forwards;
+}
+
+  

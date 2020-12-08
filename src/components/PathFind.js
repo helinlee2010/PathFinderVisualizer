@@ -3,21 +3,19 @@ import './PathFind.css';
 import Node from './Node';
 import Astar from '../algorithms/astar';
 
-const rows = 15;
-const cols = 25;
+const rows = 10;
+const cols = 20;
 
 const NODE_BEGIN_ROW = 0;
 const NODE_BEGIN_COL = 0;
 const NODE_END_ROW = rows-1;
 const NODE_END_COL = cols-1;
 
-
-
 const PathFind = () =>{ 
     const [Grid, setGrid] = useState([]);
     const [Path, setPath] = useState([]);
     const [visited, setVisited] = useState([]);
-    
+    // const [reset, setReset] = useState(false);    
     useEffect(()=>{
         initGrid();
     },[]);
@@ -110,12 +108,14 @@ const PathFind = () =>{
     const visualizeFinalPath = (nodesInPath) =>{
         for(let i=0; i< nodesInPath.length; i++){
             const node = nodesInPath[i];
-            const nodeElm = document.getElementById(`node-${node.x}-${node.y}`);
-            nodeElm.classList.add("shortest-path");
+            if(!node.isStart && !node.isEnd){
+                const nodeElm = document.getElementById(`node-${node.x}-${node.y}`);
+                nodeElm.classList.add("shortest-path");
+            }   
         }
     }
     const visualize = ()=>{
-        // If done
+        console.log("Visualizing");
         for(let i=0; i<=visited.length; i++){
             // If reaching the last one in visited records
             if(i === visited.length){
@@ -123,24 +123,34 @@ const PathFind = () =>{
             }else{ // visualize the footprint
                 setTimeout( ()=>{
                     const node = visited[i];
-                    const nodeElm = document.getElementById(`node-${node.x}-${node.y}`);
-                    nodeElm.classList.add("visited");
+                    if(!node.isStart && !node.isEnd){
+                        const nodeElm = document.getElementById(`node-${node.x}-${node.y}`);
+                        nodeElm.classList.add("visited");
+                    }
                 }, 10*i);     
             }
         }
     }
-    const reset = ()=>{
-        setGrid([]);
-        setPath([]);
-        setVisited([]);
-        initGrid();
+    // const cleanUp = ()=>{ //??Figure out how to
+    //     setReset(true);
+    //     setGrid([]);
+    //     setPath([]);
+    //     setVisited([]);
+    //     initGrid();
+    //     setReset(false);
+    // }
+
+    const reloadPage = () =>{
+        window.location.reload();
     }
 
     return(
         <div className='big-container'>
-            <h1 style={{color:'thistle'}}>Path Finder</h1>
-            <button onClick={visualize}>Visualize</button>
-            <button onClick={reset}>Reset</button>
+            <h1 style={{color:'thistle'}}>Path Finder with A*</h1>
+            <div className="button-wrapper">
+                <button onClick={visualize}>Visualize</button>
+                <button onClick={reloadPage}>Reset</button>
+            </div> 
             {gridWithNode}
         </div>
     ); 

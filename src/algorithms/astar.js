@@ -18,7 +18,7 @@ function Astar(startNode, endNode){
         visited.push(curr);
 
         if(curr === endNode){
-            console.log("Done");
+            console.log("Path found by algorithm.");
             let temp = curr;
             path.push(temp);
             while(temp.prev){
