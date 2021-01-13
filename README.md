@@ -1,7 +1,7 @@
 # Live Demo
 
-## This is a path finder app built with React and A* algorithm.
-<br/>
+### This is a path finder app built with React and A* algorithm.
+
 Check the demo at: https://helinlee2010.github.io/PathFinderVisualizer/index.html
 <br/>
 <br/>
