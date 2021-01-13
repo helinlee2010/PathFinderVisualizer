@@ -1,6 +1,8 @@
 # Live Demo
 
 Check it out at: https://helinlee2010.github.io/PathFinderVisualizer/index.html
+<br/>
+<img src="./Screen Shot 2021-01-12 at 4.40.10 PM.png" />
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
