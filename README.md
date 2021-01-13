@@ -5,7 +5,7 @@
 Check the demo at: https://helinlee2010.github.io/PathFinderVisualizer/index.html
 <br/>
 <br/>
-<img src="./Screen Shot 2021-01-12 at 4.40.10 PM.png" height=500 style={{pointer:none}} />
+<img src="./Screen Shot 2021-01-12 at 4.40.10 PM.png" height=500 />
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
