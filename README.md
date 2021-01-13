@@ -2,6 +2,7 @@
 
 Check it out at: https://helinlee2010.github.io/PathFinderVisualizer/index.html
 <br/>
+<br/>
 <img src="./Screen Shot 2021-01-12 at 4.40.10 PM.png" />
 # Getting Started with Create React App
 
